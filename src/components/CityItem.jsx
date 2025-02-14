@@ -9,7 +9,7 @@ const formatDate = (date) =>
 
 
 function CityItem({city}) {
-    console.log(city);
+    // console.log(city);
     const {cityName, emoji, date} = city
     return (
       <li className={styles.cityItem}>
