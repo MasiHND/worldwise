@@ -1,32 +1,54 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  useMapEvents,
+} from "react-leaflet";
 import styles from "./Map.module.css";
 import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
-
+import { useGeolocation } from "../hooks/useGeolocation";
+import Button from "./Button";
 
 function Map() {
   const [mapPosition, setMapPosition] = useState([35.699651, 51.337502]);
   const { cities } = useCities();
-
   const [searchParams] = useSearchParams();
+  const {
+    isLoading: isLoadingPosition,
+    position: geoLocationPosition,
+    getPosition,
+  } = useGeolocation();
+
   const mapLat = searchParams.get("lat");
   const mapLng = searchParams.get("lng");
 
-  useEffect(function () {
-    if (mapLat && mapLng)
-    setMapPosition([mapLat, mapLng]);
-  }, [mapLat, mapLng]);
-  
+  useEffect(
+    function () {
+      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
+    },
+    [mapLat, mapLng]
+  );
+
+useEffect(function(){
+  if(geoLocationPosition){
+    setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
+  }
+},[geoLocationPosition]);
+
   return (
     <div className={styles.mapContainer}>
+      { !(geoLocationPosition) && (<Button type="position" onClick={getPosition}>
+        {isLoadingPosition ? "Loading..." : "Use Your Position"}
+      </Button>)}
       <MapContainer
         className={styles.map}
         center={mapLat && mapLng ? [mapLat, mapLng] : mapPosition}
-        zoom={10
-
-        }
+        zoom={10}
         scrollWheelZoom={true}
       >
         <TileLayer
@@ -34,7 +56,10 @@ function Map() {
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
         {cities.map((city) => (
-          <Marker position={[city.position.lat, city.position.lng]} key={city.id}>
+          <Marker
+            position={[city.position.lat, city.position.lng]}
+            key={city.id}
+          >
             <Popup>
               <span>{city.emoji}</span>
               <span>{city.cityName}</span>
@@ -54,13 +79,13 @@ function ChangeCenter({ position }) {
   return null;
 }
 
-function DetectClick () {
+function DetectClick() {
   const navigate = useNavigate();
 
   useMapEvents({
-    click: (e) => { navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`)
-      ;
-    }
+    click: (e) => {
+      navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+    },
   });
 }
 
