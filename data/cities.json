@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -37,18 +25,6 @@
       "id": "98443197"
     },
     {
-      "cityName": "Nijar",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-04-03T07:47:59.202Z",
-      "notes": "",
-      "position": {
-        "lat": "36.967508314568164",
-        "lng": "-2.13128394200588"
-      },
-      "id": "98443198"
-    },
-    {
       "id": "055e",
       "cityName": "Golestan",
       "emoji": "🇮🇷",
@@ -58,138 +34,6 @@
       "position": {
         "lat": "35.51018205378388",
         "lng": "51.19091986594569"
-      }
-    },
-    {
-      "id": "accb",
-      "cityName": "Tehran",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:22:18.303Z",
-      "notes": "",
-      "position": {
-        "lat": "35.67318685789959",
-        "lng": "51.41208797364917"
-      }
-    },
-    {
-      "id": "e9fc",
-      "cityName": "Tehran",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:22:18.303Z",
-      "notes": "sfd",
-      "position": {
-        "lat": "35.67318685789959",
-        "lng": "51.41208797364917"
-      }
-    },
-    {
-      "id": "4e1f",
-      "cityName": "Shahrabad",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:26:11.604Z",
-      "notes": "",
-      "position": {
-        "lat": "35.658725898208125",
-        "lng": "50.685750406208534"
-      }
-    },
-    {
-      "id": "85e9",
-      "cityName": "Saveh",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:26:11.604Z",
-      "notes": "",
-      "position": {
-        "lat": "35.098917814869935",
-        "lng": "50.65855466698353"
-      }
-    },
-    {
-      "id": "933a",
-      "cityName": "Qom",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:26:11.604Z",
-      "notes": "",
-      "position": {
-        "lat": "34.44472585820154",
-        "lng": "51.32909351193586"
-      }
-    },
-    {
-      "id": "aa17",
-      "cityName": "Abuzeydabad",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:26:11.604Z",
-      "notes": "",
-      "position": {
-        "lat": "33.96301063026339",
-        "lng": "51.724454541236106"
-      }
-    },
-    {
-      "id": "4abc",
-      "cityName": "Chadegan",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:27:18.287Z",
-      "notes": "",
-      "position": {
-        "lat": "32.714895031828085",
-        "lng": "50.7077348051145"
-      }
-    },
-    {
-      "id": "306a",
-      "cityName": "Zarrin Shahr",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:30:19.137Z",
-      "notes": "",
-      "position": {
-        "lat": "32.36273495300539",
-        "lng": "51.24662559506247"
-      }
-    },
-    {
-      "id": "0945",
-      "cityName": "Isfahan",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:31:02.854Z",
-      "notes": "",
-      "position": {
-        "lat": "32.59201012294777",
-        "lng": "51.60724795239566"
-      }
-    },
-    {
-      "id": "26cc",
-      "cityName": "Falavarjan",
-      "emoji": "🇮🇷",
-      "country": "Iran (Islamic Republic of)",
-      "date": "2025-02-18T06:31:56.036Z",
-      "notes": "",
-      "position": {
-        "lat": "32.44874181387308",
-        "lng": "51.49850769680572"
-      }
-    },
-    {
-      "id": "0a55",
-      "cityName": "Vila Franca de Xira",
-      "emoji": "🇵🇹",
-      "country": "Portugal",
-      "date": "2025-02-18T06:32:41.798Z",
-      "notes": "fffffffff",
-      "position": {
-        "lat": "38.86656369507661",
-        "lng": "-9.007191991400394"
       }
     }
   ]
